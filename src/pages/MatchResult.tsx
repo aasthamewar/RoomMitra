@@ -8,7 +8,7 @@ const MatchResult = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background py-16">
+    <div className="min-h-screen gradient-pages py-16">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
@@ -76,28 +76,6 @@ const MatchResult = () => {
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-          <Button 
-            variant="hero" 
-            size="lg"
-            className="w-full sm:w-auto gap-2"
-            onClick={() => navigate("/")}
-          >
-            <MessageCircle className="w-5 h-5" />
-            Start Chatting
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="w-full sm:w-auto gap-2"
-            onClick={() => navigate("/")}
-          >
-            <Home className="w-5 h-5" />
-            View Room Info
-          </Button>
-        </div>
 
         {/* Match Details */}
         <Card className="mt-12 p-6 shadow-card">

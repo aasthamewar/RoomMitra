@@ -46,6 +46,7 @@
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--primary)));
     --gradient-warm: linear-gradient(135deg, hsl(var(--background)), hsl(var(--background-secondary)));
+    --gradient-pages: linear-gradient(90deg, hsl(24 100% 94%), hsl(48 100% 96%), hsl(168 25% 95%));
 
     /* Shadows */
     --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
@@ -134,5 +135,9 @@
   
   .shadow-card {
     box-shadow: var(--shadow-card);
+  }
+  
+  .gradient-pages {
+    background: var(--gradient-pages);
   }
 }

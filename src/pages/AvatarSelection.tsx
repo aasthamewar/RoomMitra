@@ -3,7 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Upload, Check } from "lucide-react";
-import avatarCollection from "@/assets/avatar-collection.jpg";
+import avatar1 from "@/assets/avatar-1.jpg";
+import avatar2 from "@/assets/avatar-2.jpg";
+import avatar3 from "@/assets/avatar-3.jpg";
+import avatar4 from "@/assets/avatar-4.jpg";
+import avatar5 from "@/assets/avatar-5.jpg";
+import avatar6 from "@/assets/avatar-6.jpg";
 
 const AvatarSelection = () => {
   const [selectedAvatar, setSelectedAvatar] = useState<number | null>(null);
@@ -34,8 +39,10 @@ const AvatarSelection = () => {
 
   const isSelectionMade = selectedAvatar !== null || uploadedImage !== null;
 
+  const avatarImages = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
+
   return (
-    <div className="min-h-screen bg-background py-16">
+    <div className="min-h-screen gradient-pages py-16">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">
@@ -93,7 +100,7 @@ const AvatarSelection = () => {
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {[0, 1, 2, 3, 4, 5].map((index) => (
+            {avatarImages.map((avatarSrc, index) => (
               <Card
                 key={index}
                 className={`p-6 cursor-pointer transition-all duration-200 hover:shadow-lg ${
@@ -105,12 +112,9 @@ const AvatarSelection = () => {
               >
                 <div className="aspect-square relative">
                   <img 
-                    src={avatarCollection}
+                    src={avatarSrc}
                     alt={`Avatar option ${index + 1}`}
                     className="w-full h-full rounded-xl object-cover"
-                    style={{
-                      objectPosition: `${(index % 3) * 50}% ${Math.floor(index / 3) * 50}%`
-                    }}
                   />
                   
                   {selectedAvatar === index && (
