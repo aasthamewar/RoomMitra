@@ -2,7 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, Home, Sparkles } from "lucide-react";
-import avatarCollection from "@/assets/avatar-collection.jpg";
+import avatar1 from "@/assets/avatar-1.jpg";
+import avatar2 from "@/assets/avatar-2.jpg";
 
 const MatchResult = () => {
   const navigate = useNavigate();
@@ -30,10 +31,9 @@ const MatchResult = () => {
               <div className="p-6">
                 <div className="w-32 h-32 rounded-xl overflow-hidden mb-4">
                   <img 
-                    src={avatarCollection}
+                    src={avatar1}
                     alt="Your avatar"
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: "0% 0%" }}
                   />
                 </div>
                 <div className="text-center">
@@ -53,10 +53,9 @@ const MatchResult = () => {
               <div className="p-6">
                 <div className="w-32 h-32 rounded-xl overflow-hidden mb-4">
                   <img 
-                    src={avatarCollection}
+                    src={avatar2}
                     alt="Match avatar"
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: "66% 0%" }}
                   />
                 </div>
                 <div className="text-center">
@@ -70,9 +69,11 @@ const MatchResult = () => {
 
         {/* Match Score */}
         <div className="text-center mb-12">
-          <div className="inline-block bg-gradient-to-r from-primary to-primary-light rounded-full p-6 shadow-soft">
-            <div className="text-5xl font-bold text-primary-foreground mb-2">92%</div>
-            <div className="text-primary-foreground/90 font-medium">Compatible</div>
+          <div className="inline-flex flex-col items-center">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-r from-primary to-primary-light flex items-center justify-center shadow-soft mb-4">
+              <div className="text-4xl font-bold text-primary-foreground">92</div>
+            </div>
+            <div className="text-lg font-semibold text-foreground">Compatible</div>
           </div>
         </div>
 
