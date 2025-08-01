@@ -2,41 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Cozy Feminine Roommate Matching Platform Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm backgrounds */
+    --background: 30 60% 97%; /* #FDF6F2 */
+    --background-secondary: 25 43% 93%; /* #F7EDE9 */
+    --foreground: 25 20% 25%;
 
+    /* Cards and surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 20% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 20% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary mauve-pink colors */
+    --primary: 0 45% 65%; /* #C97F7F */
+    --primary-light: 0 33% 78%; /* #DAB1B1 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Muted gold accent */
+    --secondary: 42 43% 69%; /* #D1B38D */
+    --secondary-foreground: 25 20% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Soft gray borders */
+    --muted: 0 0% 93%; /* #EDEDED */
+    --muted-foreground: 25 15% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 42 43% 69%;
+    --accent-foreground: 25 20% 25%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 93%; /* #EDEDED */
+    --input: 0 0% 96%;
+    --ring: 0 45% 65%;
 
-    --radius: 0.5rem;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--primary)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--background)), hsl(var(--background-secondary)));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 2px 10px hsl(0 0% 0% / 0.05);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +115,24 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-nunito;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
   }
 }

@@ -23,9 +23,11 @@ export default {
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
+				'background-secondary': 'hsl(var(--background-secondary))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
+					light: 'hsl(var(--primary-light))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
@@ -62,6 +64,9 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				nunito: ['Nunito', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
