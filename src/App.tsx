@@ -12,7 +12,7 @@ import NotFound from "./pages/NotFound";
 import VoiceAgent from "./components/VoiceAgent";
 import RoomSelection from "./pages/RoomSelection";
 import Confirmation from "./pages/Confirmation";
-
+import FindMatch from "./pages/find_match";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -32,6 +32,7 @@ const App = () => (
             <Route path="/profile" element={<ProfileSettings />} />
             <Route path="/rooms" element={<RoomSelection />} />
             <Route path="/confirmation" element={<Confirmation />} />
+            <Route path="/find_match" element={<FindMatch />} />
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

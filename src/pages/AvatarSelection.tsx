@@ -159,7 +159,7 @@ import avatar3 from "@/assets/avatar-3.jpg";
 import avatar4 from "@/assets/avatar-4.jpg";
 import avatar5 from "@/assets/avatar-5.jpg";
 import avatar6 from "@/assets/avatar-6.jpg";
-
+import FindMatch from "./find_match";
 const AvatarSelection = () => {
   const [selectedAvatar, setSelectedAvatar] = useState<number | null>(null);
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
@@ -189,7 +189,7 @@ const AvatarSelection = () => {
     } else if (selectedAvatar !== null) {
       localStorage.setItem('userAvatar', JSON.stringify({ type: 'selected', index: selectedAvatar }));
     }
-    navigate("/match-result");
+    navigate("/find_match");
   };
 
   const isSelectionMade = selectedAvatar !== null || uploadedImage !== null;
