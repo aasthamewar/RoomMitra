@@ -9,6 +9,9 @@ import AvatarSelection from "./pages/AvatarSelection";
 import MatchResult from "./pages/MatchResult";
 import ProfileSettings from "./pages/ProfileSettings";
 import NotFound from "./pages/NotFound";
+import VoiceAgent from "./components/VoiceAgent";
+import RoomSelection from "./pages/RoomSelection";
+import Confirmation from "./pages/Confirmation";
 
 const queryClient = new QueryClient();
 
@@ -20,11 +23,16 @@ const App = () => (
       <BrowserRouter>
         <div className="min-h-screen bg-background">
           <Navigation />
+
+          <VoiceAgent />
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/avatar-selection" element={<AvatarSelection />} />
             <Route path="/match-result" element={<MatchResult />} />
             <Route path="/profile" element={<ProfileSettings />} />
+            <Route path="/rooms" element={<RoomSelection />} />
+            <Route path="/confirmation" element={<Confirmation />} />
+
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
