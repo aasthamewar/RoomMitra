@@ -16,6 +16,7 @@ interface Room {
   furnishing: "Furnished" | "Non-Furnished";
   washroom: "Attached" | "Common";
   cost: number;
+  modelUrl: string
 }
 
 const sampleRooms: Room[] = [
@@ -28,6 +29,7 @@ const sampleRooms: Room[] = [
     furnishing: "Furnished",
     washroom: "Attached",
     cost: 12000,
+    modelUrl: "/models/bedroom.glb"
   },
   {
     id: "2",
@@ -38,6 +40,7 @@ const sampleRooms: Room[] = [
     furnishing: "Furnished",
     washroom: "Common",
     cost: 8000,
+    modelUrl:"/models/bedroom.glb "
   },
   {
     id: "3",
@@ -48,6 +51,7 @@ const sampleRooms: Room[] = [
     furnishing: "Non-Furnished",
     washroom: "Attached",
     cost: 9000,
+    modelUrl:"/models/bedroom.glb"
   },
   {
     id: "4",
@@ -58,6 +62,7 @@ const sampleRooms: Room[] = [
     furnishing: "Furnished",
     washroom: "Attached",
     cost: 10000,
+    modelUrl:"/models/bedroom.glb"
   },
   {
     id: "5",
@@ -68,6 +73,7 @@ const sampleRooms: Room[] = [
     furnishing: "Furnished",
     washroom: "Common",
     cost: 7500,
+    modelUrl:"/models/bedroom.glb"
   },
 ];
 
@@ -142,6 +148,19 @@ const Confirmation = () => {
             {randomMessage}
           </p>
         </div>
+        {/* 3D Model Viewer */}
+        <div style={{ padding: "2rem", textAlign: "center" }}>
+  <h2>Select Your Dream Room</h2>
+  <model-viewer
+    src={selectedRoom.modelUrl}
+    alt="3D room preview"
+    auto-rotate
+    camera-controls
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    style={{ width: "100%", maxWidth: "600px", height: "500px", margin: "auto" }}
+  ></model-viewer>
+</div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Roommate Section */}

@@ -134,6 +134,8 @@ const RoomSelection = () => {
     }
   };
 
+  
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-[hsl(var(--gradient-peach-start))] via-[hsl(var(--gradient-cream))] to-[hsl(var(--gradient-mint-end))]">
       <div className="container mx-auto px-4 py-8">
@@ -142,6 +144,7 @@ const RoomSelection = () => {
           <h1 className="text-4xl font-bold text-room-primary-foreground mb-2">Choose Your Perfect Room</h1>
           <p className="text-lg text-room-accent-foreground">Find the space that feels like home</p>
         </div>
+        
 
         {/* Filters */}
         <Card className="mb-8 bg-white/80 backdrop-blur-sm border-room-accent">
