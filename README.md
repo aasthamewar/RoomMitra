@@ -1,73 +1,124 @@
-# Welcome to your Lovable project
+# 🏠 RoomMitra – Smart Roommate Finder & Matching Assistant
 
-## Project info
+RoomMitra is a user-friendly web application designed to help users find compatible roommates based on shared preferences, habits, and personality traits. It combines a clean UI with simple onboarding, making it easy for anyone to match with their ideal roomie!
 
-**URL**: https://lovable.dev/projects/3eedfbb0-510f-4cf8-b76c-1f00088a9e45
+---
 
-## How can I edit this code?
+## 🔥 Features
 
-There are several ways of editing your application.
+🧬 AI-based Compatibility Engine: Built using behavioral inputs + personality traits to calculate real roommate synergy (not just vibes)
 
-**Use Lovable**
+🗣️ Voice onboarding agent powered by OmniDimension: Handles the interaction like a polite but sassy concierge bot
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3eedfbb0-510f-4cf8-b76c-1f00088a9e45) and start prompting.
+🧍‍♀️ Custom Avatar Builder: Let users visualize and customize their vibe
 
-Changes made via Lovable will be committed automatically to this repo.
+🏠 'Explore Roo' + 3D Room Preview: Visualize shared spaces before committing — because socks on the floor are a red flag
 
-**Use your preferred IDE**
+📝 Profile Update System: Your preferences, habits, and quirks — all adjustable like sliders on Spotify
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Getting Started
 
-Follow these steps:
+Follow these steps to run RoomMitra on your local machine:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 1. Clone the repository
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+```bash
+git clone https://github.com/your-username/RoomMitra.git
+cd RoomMitra
+```
+### 2. Install 
+```
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```
+### 3.Run 
+```
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+🧠 OmniDimension Integration
+👉 Add your API key in index.html like this:
+```
+<script>
+  const OMNIDIM_API_KEY = 'your_api_key_here';
+</script>
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
+📁 Project Structure
+```
+RoomMitra/
+├── backend/
+│   ├── venv/
+│   ├── model.py
+│   └── user_answers.csv
+│
+├── favicon_io/
+│
+├── models/
+│
+├── node_modules/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── hooks/
+│   ├── lib/
+│   ├── pages/
+│   │   ├── AvatarSelection.tsx
+│   │   ├── Confirmation.tsx
+│   │   ├── find_match.tsx
+│   │   ├── Index.tsx
+│   │   ├── LandingPage.tsx
+│   │   ├── MatchResult.tsx
+│   │   ├── NotFound.tsx
+│   │   ├── ProfileSettings.tsx
+│   │   └── RoomSelection.tsx
+│   │
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   ├── main.tsx
+│   ├── declarations.d.ts
+│   └── vite-env.d.ts
+│
+├── index.html
+└── README.md
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🐍 Backend Setup (Python Model)
+- Currently the backend is not integrated with frontend. We will use FastApi for that later.
+- But created a demo version of model which will use sentiments and tell the compartibility score , you can run that by doing this following steps:
+  ```
+  cd backend
+  ```
+-🧪 1. Create a Virtual Environment
+  ```
+  # On Windows
+     python -m venv venv
 
-## What technologies are used for this project?
+  # On macOS/Linux
+     python3 -m venv venv
+  ```
+-▶️ 2. Activate the Virtual Environment
+  python model.py
+```
+# On Windows (Command Prompt)
+venv\Scripts\activate
 
-This project is built with:
+# On Windows (PowerShell)
+.\venv\Scripts\Activate.ps1
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# On macOS/Linux
+source venv/bin/activate
+```
+- ✅ Dependencies Breakdown
+```
+pip install pandas
+pip install textblob
+python -m textblob.download_corpora
+```
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3eedfbb0-510f-4cf8-b76c-1f00088a9e45) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
