@@ -8,7 +8,7 @@ RoomMitra is a user-friendly web application designed to help users find compati
 
 🧬 AI-based Compatibility Engine: Built using behavioral inputs + personality traits to calculate real roommate synergy (not just vibes)
 
-🗣️ Voice onboarding agent powered by OmniDimension: Handles the interaction like a polite but sassy concierge bot
+🗣️ Voice onboarding agent powered by OmniDimension: Handles the interaction like a polite but sassy concierge bot. also used the alternative of omnidimension in case of not working of omnidimension. Its kind of ai agent but in text form.
 
 🧍‍♀️ Custom Avatar Builder: Let users visualize and customize their vibe
 
