@@ -29,7 +29,7 @@ const sampleRooms: Room[] = [
     furnishing: "Furnished",
     washroom: "Attached",
     cost: 12000,
-    modelUrl: "/models/bedroom.glb"
+    modelUrl: "/models/bedroom1.glb"
   },
   {
     id: "2",
@@ -40,7 +40,7 @@ const sampleRooms: Room[] = [
     furnishing: "Furnished",
     washroom: "Common",
     cost: 8000,
-    modelUrl:"/models/bedroom.glb "
+    modelUrl:"/models/bedroom1.glb "
   },
   {
     id: "3",
@@ -51,7 +51,7 @@ const sampleRooms: Room[] = [
     furnishing: "Non-Furnished",
     washroom: "Attached",
     cost: 9000,
-    modelUrl:"/models/bedroom.glb"
+    modelUrl:"/models/bedroom1.glb"
   },
   {
     id: "4",
@@ -62,7 +62,7 @@ const sampleRooms: Room[] = [
     furnishing: "Furnished",
     washroom: "Attached",
     cost: 10000,
-    modelUrl:"/models/bedroom.glb"
+    modelUrl:"/models/bedroom1.glb"
   },
   {
     id: "5",
@@ -73,7 +73,7 @@ const sampleRooms: Room[] = [
     furnishing: "Furnished",
     washroom: "Common",
     cost: 7500,
-    modelUrl:"/models/bedroom.glb"
+    modelUrl:"/models/bedroom1.glb"
   },
 ];
 

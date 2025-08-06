@@ -337,7 +337,12 @@ const RoomSelection = () => {
         {/* Confirm Button */}
         {selectedRoom && (
           <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-10">
+            
             <Button 
+              style={{ backgroundColor: "rgb(245,151,148)",
+                
+               }}
+
               onClick={handleConfirm}
               size="lg"
               className="bg-room-success hover:bg-room-success/90 text-room-success-foreground px-8 py-3 rounded-full shadow-lg"

@@ -31,6 +31,7 @@ const App = () => (
             <Route path="/match-result" element={<MatchResult />} />
             <Route path="/profile" element={<ProfileSettings />} />
             <Route path="/rooms" element={<RoomSelection />} />
+           <Route path="/room-selection" element={<RoomSelection />} />
             <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/find_match" element={<FindMatch />} />
 

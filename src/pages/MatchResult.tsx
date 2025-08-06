@@ -252,6 +252,17 @@ const MatchResult = () => {
             </div>
           </div>
         </Card>
+
+        {/* Explore Page Button */}
+         <div className="flex justify-center mt-10">
+  <Button
+    style={{ backgroundColor: "rgb(245,151,148)" }}
+    className="text-white text-xl px-12 py-4 rounded-full shadow-lg border-0"
+    onClick={() => navigate("/room-selection")}
+  >
+    Explore Rooms
+  </Button>
+</div>
       </div>
     </div>
   );
