@@ -133,10 +133,22 @@ import avatar6 from "@/assets/avatar-6.jpg";
 const MatchResult = () => {
   const navigate = useNavigate();
   const [userAvatarSrc, setUserAvatarSrc] = useState(avatar1);
+  const [score, setScore] = useState<number | null>(null);
 
   const avatarImages = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
 
+  const [data, setData] = useState<any>(null);
+
   useEffect(() => {
+
+    fetch("http://localhost:8000/latest-score")
+    .then(res => res.json())
+    .then(json => {
+      setScore(json.score);
+      setData(json);   // <-- ADD THIS
+    });
+
+
     const savedAvatar = localStorage.getItem('userAvatar');
     if (savedAvatar) {
       const avatarData = JSON.parse(savedAvatar);
@@ -146,6 +158,14 @@ const MatchResult = () => {
         setUserAvatarSrc(avatarImages[avatarData.index]);
       }
     }
+    // Load Score
+    fetch('http://localhost:8000/latest-score')
+    .then(res => res.json())
+    .then(data => {
+      setScore(data.score);   // assuming your API returns {score: 85}
+    })
+    .catch(err => console.error('Error loading score:', err));
+    
   }, []);
 
   return (
@@ -211,7 +231,7 @@ const MatchResult = () => {
         <div className="text-center mb-12">
           <div className="inline-flex flex-col items-center">
             <div className="w-32 h-32 rounded-full bg-gradient-to-r from-primary to-primary-light flex items-center justify-center shadow-soft mb-4">
-              <div className="text-4xl font-bold text-primary-foreground">92</div>
+              <div className="text-4xl font-bold text-primary-foreground">{score !== null ? score : "…"}</div>
             </div>
             <div className="text-lg font-semibold text-foreground">Compatible</div>
           </div>
@@ -221,6 +241,11 @@ const MatchResult = () => {
         {/* Match Details */}
         <Card className="mt-12 p-6 shadow-card">
           <h3 className="text-xl font-semibold mb-4 text-center">Why You're a Great Match</h3>
+          {/* Summary */}
+          {data?.summary && (
+          <p className="text-center text-muted-foreground mb-6">
+          {data.summary}
+          </p>)}
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-3">
               <div className="flex items-center gap-3">

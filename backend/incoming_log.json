@@ -1,0 +1,51 @@
+{
+    "formId": "form_cmdttqub30001s4r4qvmktb4q",
+    "formName": "Find your Match",
+    "formUrl": "https://formshare.ai/r/0rHXDfX8KM",
+    "submissionId": "submission_erv1pr8azihsa2ddpexk6leb",
+    "createdAt": "2025-12-09T05:59:18.231Z",
+    "data": [
+        {
+            "id": "question_biiveo3piviqmw8kn5h1l17g",
+            "type": "text",
+            "question": "Hi! I'm your roommate match assistant. I’ll ask you a few questions to understand your ideal roommate. Please be honest. Let's start with the first question: What’s your usual daily routine like? Do you have a preference for someone with a similar or different schedule?",
+            "answer": "my work start from evening so i am kind of person who wakes up late"
+        },
+        {
+            "id": "question_qldmhhu63z3ua2k849df1mfw",
+            "type": "select",
+            "question": "Got it! So you wake up late and work in the evening. Do you prefer a roommate who has a similar schedule, or are you open to living with someone who has a different routine?",
+            "answer": "Different schedule"
+        },
+        {
+            "id": "question_d8ohsqyfqr2fezqsmjjba6wm",
+            "type": "scale",
+            "question": "Great! A different schedule can bring some balance. Now, next question: How tidy do you like to keep your living space? Would you prefer someone with the same level of cleanliness?",
+            "answer": "10"
+        },
+        {
+            "id": "question_wjzbv8yc7mqm3vizir94uy1c",
+            "type": "scale",
+            "question": "So you like to keep your space very clean! Would you prefer a roommate who shares that same level of cleanliness?",
+            "answer": "10"
+        },
+        {
+            "id": "question_zs29yi50cue03p6gxxh1qonr",
+            "type": "select",
+            "question": "Got it! You prefer a roommate who is also very tidy. Now, here’s the next question: Are you more of a quiet homebody or someone who enjoys guests, music, or socializing at home?",
+            "answer": "Enjoys guests, music, or socializing"
+        },
+        {
+            "id": "question_sedrhp121ghrph1p8h5jachj",
+            "type": "text",
+            "question": "That sounds fun! You enjoy a lively atmosphere at home. Now, let's talk about some important preferences. Do you have any non-negotiables when it comes to a roommate? For example—pets, smoking, or overnight guests?",
+            "answer": "yes, as don't like smoking and overnight guest "
+        },
+        {
+            "id": "question_am4ej7thozk5jsq4gomsbrmb",
+            "type": "text",
+            "question": "Got it! No smoking and no overnight guests are your non-negotiables. Now, let’s move on to the last question: How do you prefer to handle shared expenses like rent, bills, and groceries?",
+            "answer": "i would love if everyone handle there expenses on there own"
+        }
+    ]
+}

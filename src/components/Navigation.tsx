@@ -64,14 +64,27 @@ const Navigation = () => {
                   Explore Rooms
                 </Button>
 
-                <Button
+                {/* <Button
                   variant="ghost"
                   className="w-full justify-start gap-3 h-12 text-base"
                   onClick={() => handleNavigation("/")}
                 >
                   <LogOut className="w-5 h-5" />
                   Sign Out
-                </Button>
+                </Button> */}
+                <Button
+                variant="ghost"
+                className="w-full justify-start gap-3 h-12 text-base"
+                onClick={() => {
+                localStorage.removeItem("authToken"); // remove login
+                setIsOpen(false);                     // close menu
+                navigate("/login");                   // go to login page
+                }}
+              >
+                <LogOut className="w-5 h-5" />
+                Sign Out
+               </Button>
+
               </div>
             </div>
           </SheetContent>

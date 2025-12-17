@@ -6,6 +6,17 @@ import heroIllustration from "@/assets/hero-illustration.jpg";
 const LandingPage = () => {
   const navigate = useNavigate();
 
+  const handleGetStarted = () => {
+  const token = localStorage.getItem("authToken");
+
+  if (!token) {
+    navigate("/login");       // user not logged in → go to login
+  } else {
+    navigate("/find_match");   // user logged in → go to find match
+  }
+};
+
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16">
@@ -32,7 +43,7 @@ const LandingPage = () => {
               <Button 
                 variant="hero" 
                 size="lg"
-                onClick={() => navigate("/avatar-selection")}
+                onClick={handleGetStarted}
                 className="group"
               >
                 Get Started

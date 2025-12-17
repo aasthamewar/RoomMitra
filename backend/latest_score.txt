@@ -1,0 +1,11 @@
+{
+    "score": 25,
+    "answers": "my work start from evening so i am kind of person who wakes up late | Different schedule | 10 | 10 | Enjoys guests, music, or socializing | yes, as don't like smoking and overnight guest  | i would love if everyone handle there expenses on there own",
+    "why_match": [
+        "You share a similar late-night routine."
+    ],
+    "conflicts": [
+        "No major conflict areas detected."
+    ],
+    "summary": "You might face some challenges as roommates. Here\u2019s where you naturally connect: You share a similar late-night routine."
+}

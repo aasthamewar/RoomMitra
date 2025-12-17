@@ -13,6 +13,9 @@ import VoiceAgent from "./components/VoiceAgent";
 import RoomSelection from "./pages/RoomSelection";
 import Confirmation from "./pages/Confirmation";
 import FindMatch from "./pages/find_match";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Onboarding from "./pages/Onboarding";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -31,9 +34,13 @@ const App = () => (
             <Route path="/match-result" element={<MatchResult />} />
             <Route path="/profile" element={<ProfileSettings />} />
             <Route path="/rooms" element={<RoomSelection />} />
-           <Route path="/room-selection" element={<RoomSelection />} />
+            <Route path="/room-selection" element={<RoomSelection />} />
             <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/find_match" element={<FindMatch />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/onboarding" element={<Onboarding />} />
+
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
